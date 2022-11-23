@@ -2,13 +2,13 @@
 
 ### Задание 1
 - 1.3 Выполните запрос на получение списка пользователей в Базе Данных. (скриншот)
-![список пользователей]([\images\1-3.svg](https://github.com/bogdanovap/SQLDB-1/blob/master/02/images/1-3.PNG))
+![список пользователей](https://github.com/bogdanovap/SQLDB-1/blob/master/02/images/1-3.PNG)
 
 - 1.5 Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
-![права пользователя]([\images\1-5.svg](https://github.com/bogdanovap/SQLDB-1/blob/master/02/images/1-5.PNG))
+![права пользователя](https://github.com/bogdanovap/SQLDB-1/blob/master/02/images/1-5.PNG)
 
 - 1.8 При работе в IDE сформируйте ER-диаграмму получившейся базы данных.(скриншот)
-![er-диаграмма]([\images\1-8.svg](https://github.com/bogdanovap/SQLDB-1/blob/master/02/images/1-8.PNG))
+![er-диаграмма](https://github.com/bogdanovap/SQLDB-1/blob/master/02/images/1-5.PNG)
 
 Список запросов к БД в [файле](hw_01.sql)
 
