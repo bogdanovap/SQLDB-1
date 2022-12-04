@@ -1,0 +1,1 @@
+select round(sum(INDEX_LENGTH)/sum(DATA_LENGTH)*100,2) as index_length_percent from information_schema.TABLES
