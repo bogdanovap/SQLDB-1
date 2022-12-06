@@ -18,11 +18,11 @@ master-master предполагает возможность использов
 
 Созданы 2 докер-контейнера, в каждом - инстанс MySQL
 Первый контейнер настройен как master. В нем создана база данных world.
-![master status](https://github.com/bogdanovap/SQLDB-1/blob/master/03/images/show_master_status.PNG)
+![master status](https://github.com/bogdanovap/SQLDB-1/blob/master/04/images/show_master_status.PNG)
 
 Второй контейнер настроен как slave. В нем востановлена база данных world (из дампа) и настроена репликация данных.
-![slave status](https://github.com/bogdanovap/SQLDB-1/blob/master/04/images/show slave status.PNG)
+![slave status](https://github.com/bogdanovap/SQLDB-1/blob/master/04/images/show%20slave%20status.PNG)
 
 После настройки репликации, в master создана таблица, в которую добавлена одна запись. 
 Данная запись успешно реплицирована на slave
-![select from slave](https://github.com/bogdanovap/SQLDB-1/blob/master/03/images/slave db select example.PNG)
+![select from slave](https://github.com/bogdanovap/SQLDB-1/blob/master/04/images/slave%20db%20select%20example.PNG)
