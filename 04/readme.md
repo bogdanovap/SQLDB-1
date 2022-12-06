@@ -21,7 +21,7 @@ master-master предполагает возможность использов
 ![master status](https://github.com/bogdanovap/SQLDB-1/blob/master/04/images/show_master_status.png)
 
 Второй контейнер настроен как slave. В нем востановлена база данных world (из дампа) и настроена репликация данных.
-![slave status](https://github.com/bogdanovap/SQLDB-1/blob/master/04/images/show%20slave%20status.png)
+![slave status](https://github.com/bogdanovap/SQLDB-1/blob/master/04/show%20slave%20status.png)
 
 После настройки репликации, в master создана таблица, в которую добавлена одна запись. 
 Данная запись успешно реплицирована на slave
