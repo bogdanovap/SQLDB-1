@@ -1,0 +1,65 @@
+version: "3"
+
+services:
+  db_users:
+    image: mysql:debian
+    container_name: db_users
+    ports:
+      - 3012:3006
+    environment:
+      - MYSQL_DATABASE=sharding
+      - MYSQL_ROOT_PASSWORD=pass
+    networks:
+      db_network:
+        ipv4_address: 172.20.0.12
+    restart: always
+    volumes:
+      - ./db_users/create_tables.sql:/docker-entrypoint-initdb.d/init.sql
+  db_books:
+    image: mysql:debian
+    container_name: db_books
+    ports:
+      - 3013:3006
+    environment:
+      - MYSQL_DATABASE=sharding
+      - MYSQL_ROOT_PASSWORD=pass
+    networks:
+      db_network:
+        ipv4_address: 172.20.0.13
+    restart: always
+    volumes:
+      - ./db_books/create_tables.sql:/docker-entrypoint-initdb.d/init.sql
+  db_shops_bases:
+    image: mysql:debian
+    container_name: db_shops_base
+    ports:
+      - 3014:3006
+    environment:
+      - MYSQL_DATABASE=sharding
+      - MYSQL_ROOT_PASSWORD=pass
+    networks:
+      db_network:
+        ipv4_address: 172.20.0.14
+    restart: always
+    volumes:
+      - ./db_shops_base/create_tables.sql:/docker-entrypoint-initdb.d/init.sql
+  db_shops_extra:
+    image: mysql:debian
+    container_name: db_shops_extra
+    ports:
+      - 3015:3006
+    environment:
+      - MYSQL_DATABASE=sharding
+      - MYSQL_ROOT_PASSWORD=pass
+    networks:
+      db_network:
+        ipv4_address: 172.20.0.15
+    restart: always
+    volumes:
+      - ./db_shops_extra/create_tables.sql:/docker-entrypoint-initdb.d/init.sql
+networks:
+  db_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
